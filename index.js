@@ -58,7 +58,7 @@ app.post("/users", async (req, res) => {
 
   try {
     await user.save();
-    res.send("User created");
+    res.send(user);
   } catch (err) {
     res.status(500).send(err);
   }
